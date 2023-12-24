@@ -1,0 +1,79 @@
+  #1
+
+import matplotlib.pyplot as plt
+
+# Данные для линейного графика (время и температура)
+time = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+temperature = [20, 22, 23, 25, 24, 26, 27, 26, 24, 22]
+
+plt.plot(time, temperature)
+plt.xlabel('Время')
+plt.ylabel('Температура')
+plt.title('Изменение температуры в течение дня')
+plt.show()
+
+  #2
+
+import matplotlib.pyplot as plt
+import random
+
+# Данные для столбчатой диаграммы (названия категорий и количество продаж)
+categories = ['Electronics', 'Clothing', 'Books', 'Toys', 'Home Appliances']
+sales = [random.randint(50, 200) for _ in range(len(categories))]
+
+plt.bar(categories, sales)
+plt.xlabel('Категории товаров')
+plt.ylabel('Количество продаж')
+plt.title('Продажи по категориям товаров')
+plt.show()
+
+  #3
+
+import matplotlib.pyplot as plt
+import random
+
+# Случайные данные для веса и роста
+weight = [random.uniform(50, 100) for _ in range(50)]
+height = [random.uniform(150, 200) for _ in range(50)]
+
+plt.scatter(weight, height)
+plt.xlabel('Вес')
+plt.ylabel('Рост')
+plt.title('Зависимость роста от веса')
+plt.show()
+
+
+  #4
+
+import matplotlib.pyplot as plt
+import random
+
+# Случайные данные для оценок учеников
+grades = [random.randint(1, 5) for _ in range(100)]
+
+plt.hist(grades, bins=5, edgecolor='black')
+plt.xlabel('Оценки')
+plt.ylabel('Количество учеников')
+plt.title('Распределение оценок по математике')
+plt.show()
+
+
+  #5
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Создание массивов x и y
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+x, y = np.meshgrid(x, y)
+
+# Функция z = f(x, y)
+z = np.sin(np.sqrt(x**2 + y**2))
+
+plt.contourf(x, y, z, cmap='viridis')
+plt.colorbar()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('График функции z = f(x, y)')
+plt.show()
